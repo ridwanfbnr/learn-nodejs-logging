@@ -1,0 +1,40 @@
+{
+    "name": "belajar-nodejs-logging",
+    "version": "1.0.0",
+    "description": "Belajar NodeJS Logging",
+    "main": "./src/index.js",
+    "type": "module",
+    "scripts": {
+        "test": "jest"
+    },
+    "jest": {
+        "maxConcurrency": 5,
+        "transform": {
+            "^.+\\.[t|j]sx?$": "babel-jest"
+        },
+        "collectCoverage": false,
+        "coverageThreshold": {
+            "global": {
+                "branches": 100,
+                "functions": 100,
+                "lines": 100,
+                "statements": 100
+            }
+        },
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx}",
+            "!vendor/**/*.{js,jsx}"
+        ]
+    },
+    "author": "Ridwan Febnur AR",
+    "license": "ISC",
+    "dependencies": {
+        "winston": "^3.8.0",
+        "winston-daily-rotate-file": "^4.7.1"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.18.2",
+        "babel-jest": "^28.1.0",
+        "jest": "^28.1.0"
+    }
+}
